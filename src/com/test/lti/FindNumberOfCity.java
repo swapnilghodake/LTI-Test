@@ -35,6 +35,7 @@ public class FindNumberOfCity {
 			logger.info("Response status code: " + response.statusCode());
 			
 
+			// For JSON Parsing add json-simple-1.1.jar in classpath
 			JSONParser jsonParser = new JSONParser();
 			JSONObject jsonParentObject = (JSONObject) jsonParser.parse(response.body());
 			JSONArray jsonArray = (JSONArray) jsonParentObject.get("list");
